@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import {KokocModule} from "./modules/kokoc-module";
 import {getDatabaseConfig} from "./database-config";
 
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),

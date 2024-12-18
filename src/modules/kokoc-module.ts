@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { EntityService } from './entity.service';
-import { EntityController } from './entity.controller';
 import {Kokoc} from "../entities/kokoc-entity";
+import {KokocController} from "../controllers/kokoc-controller";
+import {KokocService} from "../services/kokoc-service";
 
 @Module({
     imports: [TypeOrmModule.forFeature([Kokoc])],
-    providers: [EntityService],
-    controllers: [EntityController],
+    providers: [KokocService],
+    controllers: [KokocController],
 })
-export class EntityModule {}
+export class KokocModule {}
